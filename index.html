@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- =========================================================
-     LEGEND SARAVANAN RASIGAR MANDRAM – OFFICIAL WEBSITE
-     Single Page | Responsive | GitHub Pages Safe
-========================================================= -->
-
 <meta charset="UTF-8">
 <title>Legend Saravanan Rasigar Mandram</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ======================= GLOBAL STYLES ======================= -->
+<!-- ======================================================
+GLOBAL STYLES
+====================================================== -->
 <style>
-/* ---------- COLOR THEME ---------- */
 :root{
-  --choco-dark:#1b0d06;
-  --choco-main:#2a1409;
-  --choco-light:#3b1f0f;
+  --dark:#1b0d06;
+  --main:#2a1409;
+  --light:#3b1f0f;
   --gold:#f5c16c;
   --text:#ffffff;
 }
 
-/* ---------- RESET ---------- */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
-/* ---------- BODY ---------- */
 body{
   font-family:Arial, Helvetica, sans-serif;
-  background:var(--choco-main);
+  background:var(--main);
   color:var(--text);
   line-height:1.7;
 }
 
-/* ---------- COMMON ---------- */
-section{
-  padding:50px 20px;
-  max-width:1200px;
-  margin:auto;
-}
-
-h1,h2,h3{
-  color:var(--gold);
-  text-align:center;
-  margin-bottom:20px;
-}
-
-p{
-  max-width:900px;
-  margin:10px auto;
-  text-align:center;
-  font-size:16px;
-}
-
 /* ---------- HEADER ---------- */
 header{
-  background:var(--choco-dark);
+  background:var(--dark);
   padding:30px 20px;
   text-align:center;
 }
 
 header h1{
+  color:var(--gold);
   font-size:32px;
+}
+
+/* ---------- LANGUAGE BUTTON ---------- */
+.lang-btn{
+  position:fixed;
+  top:15px;
+  right:15px;
+  background:var(--gold);
+  color:#000;
+  padding:10px 18px;
+  border:none;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:999;
 }
 
 /* ---------- NAV ---------- */
@@ -83,8 +73,36 @@ nav a{
   font-size:14px;
 }
 
-nav a:hover{
+nav a:hover{color:var(--gold);}
+
+/* ---------- SECTIONS ---------- */
+section{
+  padding:50px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+h2,h3{
   color:var(--gold);
+  text-align:center;
+  margin-bottom:20px;
+}
+
+p{
+  max-width:900px;
+  margin:10px auto;
+  text-align:center;
+}
+
+/* ---------- SLIDESHOW ---------- */
+.slideshow{
+  text-align:center;
+}
+.slideshow img{
+  width:90%;
+  max-width:700px;
+  border-radius:15px;
+  display:none;
 }
 
 /* ---------- GRID ---------- */
@@ -96,66 +114,26 @@ nav a:hover{
 
 /* ---------- CARD ---------- */
 .card{
-  background:var(--choco-light);
+  background:var(--light);
   padding:20px;
   border-radius:12px;
   text-align:center;
 }
 
-/* ---------- TABLE ---------- */
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin-top:25px;
-}
-
-th,td{
-  border:1px solid #5a2c16;
-  padding:10px;
-}
-
-th{
-  background:#5a2c16;
-  color:var(--gold);
-}
-
-/* ---------- IFRAME ---------- */
-iframe{
-  width:100%;
-  border-radius:12px;
-  margin-top:15px;
-}
-
-/* ---------- SLIDESHOW ---------- */
-.slideshow{
-  text-align:center;
-}
-
-.slideshow img{
-  width:90%;
-  max-width:700px;
-  border-radius:15px;
-  margin-bottom:15px;
-}
-
 /* ---------- FORM ---------- */
 form{
-  max-width:600px;
-  margin:auto;
+  margin-top:15px;
 }
-
 input,textarea{
   width:100%;
-  padding:12px;
-  margin:8px 0;
+  padding:10px;
+  margin:6px 0;
   border:none;
   border-radius:6px;
 }
-
-/* ---------- BUTTON ---------- */
-button{
+button.submit{
   width:100%;
-  padding:14px;
+  padding:12px;
   background:var(--gold);
   border:none;
   border-radius:25px;
@@ -163,15 +141,10 @@ button{
   cursor:pointer;
 }
 
-/* ---------- WHATSAPP ---------- */
-.whatsapp{
-  display:inline-block;
-  background:#25D366;
-  color:#000;
-  padding:14px 30px;
-  border-radius:25px;
-  text-decoration:none;
-  font-weight:bold;
+/* ---------- IFRAME ---------- */
+iframe{
+  width:100%;
+  border-radius:12px;
   margin-top:15px;
 }
 
@@ -183,248 +156,192 @@ footer{
   font-size:14px;
 }
 
+/* ---------- LANGUAGE VISIBILITY ---------- */
+.lang-ta{display:none}
+
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:768px){
   header h1{font-size:26px}
-  nav a{font-size:13px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- =========================================================
-     DISCLAIMER / ENTRY SECTION
-========================================================= -->
-<section>
-<h2>Disclaimer | அறிவிப்பு</h2>
+<!-- LANGUAGE TOGGLE BUTTON -->
+<button class="lang-btn" onclick="toggleLang()">தமிழ்</button>
 
-<p>
-<strong>English:</strong><br>
-This is a fan-created website for Legend Saravanan Rasigar Mandram.
-All media belongs to respective owners.
-</p>
-
-<p>
-<strong>தமிழ்:</strong><br>
-இது லெஜண்ட் சரவணன் ரசிகர் மன்றத்திற்கான ரசிகர்கள் உருவாக்கிய இணையதளம்.
-</p>
-
-</section>
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
+<!-- ======================================================
+HEADER
+====================================================== -->
 <header>
-<h1>Legend Saravanan Rasigar Mandram</h1>
-<p>State President – Muthu Durai | மாநில தலைவர் – முத்து துரை</p>
+  <h1 class="lang-en">Legend Saravanan Rasigar Mandram</h1>
+  <h1 class="lang-ta">லெஜண்ட் சரவணன் ரசிகர் மன்றம்</h1>
+
+  <p class="lang-en">State President – Muthu Durai</p>
+  <p class="lang-ta">மாநில தலைவர் – முத்து துரை</p>
 </header>
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
+<!-- ======================================================
+NAVIGATION
+====================================================== -->
 <nav>
-<a href="#about">Legend</a>
-<a href="#movie">First Movie</a>
-<a href="#songs">Songs</a>
-<a href="#second">Second Movie</a>
-<a href="#mandram">Mandram</a>
-<a href="#zones">7 Zones</a>
-<a href="#press">Press Kit</a>
-<a href="#join">Join</a>
-<a href="#contact">Contact</a>
+  <a href="#about">Legend</a>
+  <a href="#movie">Movie</a>
+  <a href="#zones">7 Zones</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<!-- =========================================================
-     ABOUT LEGEND
-========================================================= -->
+<!-- ======================================================
+ABOUT LEGEND
+====================================================== -->
 <section id="about">
-<h2>About Legend Saravanan | லெஜண்ட் சரவணன்</h2>
+<h2 class="lang-en">About Legend Saravanan</h2>
+<h2 class="lang-ta">லெஜண்ட் சரவணன் பற்றி</h2>
 
-<p>
-<strong>English:</strong><br>
+<p class="lang-en">
 Legend Saravanan is a respected businessman who entered Tamil cinema
-with a strong social message, simplicity, and dedication.
+with a strong social message and simplicity.
 </p>
 
-<p>
-<strong>தமிழ்:</strong><br>
-லெஜண்ட் சரவணன் தொழிலதிபராக இருந்து தமிழ் திரையுலகில்
-சமூக கருத்துகளுடன் அறிமுகமானவர்.
+<p class="lang-ta">
+லெஜண்ட் சரவணன் தொழிலதிபராக இருந்து சமூக கருத்துகளுடன்
+தமிழ் திரையுலகில் அறிமுகமானவர்.
 </p>
 </section>
 
-<!-- =========================================================
-     IMAGE SLIDESHOW
-========================================================= -->
+<!-- ======================================================
+CENTER SLIDESHOW
+====================================================== -->
 <section class="slideshow">
-<h2>Gallery | புகைப்படங்கள்</h2>
-
-<img src="https://i.ibb.co/Xfp8MHLk/1000839050-1.jpg" alt="Legend Image">
-<img src="https://i.ibb.co/WpfcK2dm/1000841811-1.jpg" alt="Legend Image">
-<img src="https://i.ibb.co/4ncPb6R7/1000841812.jpg" alt="Legend Image">
+<img src="https://i.ibb.co/Xfp8MHLk/1000839050-1.jpg">
+<img src="https://i.ibb.co/WpfcK2dm/1000841811-1.jpg">
+<img src="https://i.ibb.co/4ncPb6R7/1000841812.jpg">
 </section>
 
-<!-- =========================================================
-     FIRST MOVIE
-========================================================= -->
+<!-- ======================================================
+MOVIE SECTION
+====================================================== -->
 <section id="movie">
-<h2>Legend Movie (2022) | லெஜண்ட் திரைப்படம்</h2>
+<h2 class="lang-en">Legend Movie (2022)</h2>
+<h2 class="lang-ta">லெஜண்ட் திரைப்படம் (2022)</h2>
 
-<p>
-<strong>English:</strong><br>
-Legend marks the cinematic debut of Legend Saravanan.
-</p>
-
-<p>
-<strong>தமிழ்:</strong><br>
-லெஜண்ட் சரவணனின் முதல் திரைப்படம்.
-</p>
-
-<h3>Official Trailer</h3>
-<iframe height="420" src="https://www.youtube.com/embed/mvQK78iCxWY" allowfullscreen></iframe>
-
-<h3>Audio Launch</h3>
-<iframe height="420" src="https://www.youtube.com/embed/xBFEsl0fpxE" allowfullscreen></iframe>
+<iframe height="420" src="https://www.youtube.com/embed/mvQK78iCxWY"></iframe>
+<iframe height="420" src="https://www.youtube.com/embed/xBFEsl0fpxE"></iframe>
 </section>
 
-<!-- =========================================================
-     SONGS SECTION
-========================================================= -->
-<section id="songs">
-<h2>Legend Movie Songs | பாடல்கள்</h2>
-
-<table>
-<tr>
-<th>Song Name</th>
-<th>Singer</th>
-<th>Lyricist</th>
-</tr>
-<tr>
-<td>Legend Theme</td>
-<td>Vijay Prakash</td>
-<td>Viveka</td>
-</tr>
-<tr>
-<td>Vaada Thambi</td>
-<td>Anirudh Ravichander</td>
-<td>Viveka</td>
-</tr>
-<tr>
-<td>Mayakkama Kalakkama</td>
-<td>Sid Sriram</td>
-<td>Viveka</td>
-</tr>
-<tr>
-<td>Mosalo Mosalu</td>
-<td>Benny Dayal</td>
-<td>Viveka</td>
-</tr>
-</table>
-
-<div class="grid">
-<iframe height="200" src="https://www.youtube.com/embed/psX8hRq_9Vw"></iframe>
-<iframe height="200" src="https://www.youtube.com/embed/PCeVoPfxCOU"></iframe>
-<iframe height="200" src="https://www.youtube.com/embed/08kiqkeE87U"></iframe>
-<iframe height="200" src="https://www.youtube.com/embed/F3QNDkE2h0Y"></iframe>
-</div>
-</section>
-
-<!-- =========================================================
-     SECOND MOVIE
-========================================================= -->
-<section id="second">
-<h2>Legend Second Movie | இரண்டாம் படம்</h2>
-
-<p>
-<strong>English:</strong><br>
-Legend Saravanan’s second movie is directed by Durai Senthilkumar.
-Official announcement coming soon.
-</p>
-
-<p>
-<strong>தமிழ்:</strong><br>
-துரை செந்தில்குமார் இயக்கத்தில் லெஜண்ட் சரவணனின் இரண்டாம் படம்.
-</p>
-</section>
-
-<!-- =========================================================
-     MANDRAM
-========================================================= -->
-<section id="mandram">
-<h2>Legend Rasigar Mandram</h2>
-
-<p>
-<strong>State President:</strong> Muthu Durai<br>
-தமிழகமெங்கும் சமூக சேவைகள், நலத்திட்டங்கள்.
-</p>
-</section>
-
-<!-- =========================================================
-     ZONES
-========================================================= -->
+<!-- ======================================================
+ZONES WITH FORMS
+====================================================== -->
 <section id="zones">
-<h2>Legend Mandram – 7 Zones</h2>
+<h2 class="lang-en">Legend Mandram – 7 City Zones</h2>
+<h2 class="lang-ta">லெஜண்ட் ரசிகர் மன்றம் – 7 மண்டலங்கள்</h2>
 
 <div class="grid">
-<div class="card">Chennai</div>
-<div class="card">Trichy</div>
-<div class="card">Madurai</div>
-<div class="card">Tirunelveli</div>
-<div class="card">Coimbatore</div>
-<div class="card">Thanjavur</div>
-<div class="card">Vellore</div>
+
+<!-- ZONE TEMPLATE (REPEATED) -->
+<div class="card">
+<h3>Chennai</h3>
+<form onsubmit="alert('Thank you for joining Chennai Zone');return false;">
+<input placeholder="Name">
+<input placeholder="Phone">
+<button class="submit">Join</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Trichy</h3>
+<form onsubmit="alert('Thank you for joining Trichy Zone');return false;">
+<input placeholder="Name">
+<input placeholder="Phone">
+<button class="submit">Join</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Madurai</h3>
+<form onsubmit="alert('Thank you for joining Madurai Zone');return false;">
+<input placeholder="Name">
+<input placeholder="Phone">
+<button class="submit">Join</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Tirunelveli</h3>
+<form onsubmit="alert('Thank you for joining Tirunelveli Zone');return false;">
+<input placeholder="Name">
+<input placeholder="Phone">
+<button class="submit">Join</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Coimbatore</h3>
+<form onsubmit="alert('Thank you for joining Coimbatore Zone');return false;">
+<input placeholder="Name">
+<input placeholder="Phone">
+<button class="submit">Join</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Thanjavur</h3>
+<form onsubmit="alert('Thank you for joining Thanjavur Zone');return false;">
+<input placeholder="Name">
+<input placeholder="Phone">
+<button class="submit">Join</button>
+</form>
+</div>
+
+<div class="card">
+<h3>Vellore</h3>
+<form onsubmit="alert('Thank you for joining Vellore Zone');return false;">
+<input placeholder="Name">
+<input placeholder="Phone">
+<button class="submit">Join</button>
+</form>
+</div>
+
 </div>
 </section>
 
-<!-- =========================================================
-     PRESS KIT
-========================================================= -->
-<section id="press">
-<h2>Press Kit</h2>
-
-<p>
-Official photos and documents will be available for media use.
-</p>
-</section>
-
-<!-- =========================================================
-     JOIN
-========================================================= -->
-<section id="join">
-<h2>Join Mandram | சேரவும்</h2>
-
-<form onsubmit="alert('Thank you for joining / நன்றி');return false;">
-<input placeholder="Name / பெயர்" required>
-<input placeholder="Age / வயது">
-<input placeholder="City / நகரம்">
-<input placeholder="Education / கல்வி">
-<input placeholder="Job / Business">
-<button>Submit</button>
-</form>
-</section>
-
-<!-- =========================================================
-     CONTACT
-========================================================= -->
+<!-- ======================================================
+CONTACT
+====================================================== -->
 <section id="contact">
 <h2>Contact</h2>
-
-<p>
-Muthu Durai – 8144441789
-</p>
-
-<a class="whatsapp" href="https://wa.me/918144441789" target="_blank">
-WhatsApp Muthu Durai
-</a>
+<p>Muthu Durai – 8144441789</p>
 </section>
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 <footer>
-© Legend Saravanan Rasigar Mandram – Fan Initiative Website
+© Legend Saravanan Rasigar Mandram – Fan Initiative
 </footer>
+
+<!-- ======================================================
+JAVASCRIPT (SAFE)
+====================================================== -->
+<script>
+/* LANGUAGE TOGGLE */
+function toggleLang(){
+  document.querySelectorAll('.lang-en').forEach(e=>{
+    e.style.display = e.style.display === 'none' ? 'block' : 'none';
+  });
+  document.querySelectorAll('.lang-ta').forEach(e=>{
+    e.style.display = e.style.display === 'none' ? 'block' : 'none';
+  });
+}
+
+/* SLIDESHOW */
+let slides=document.querySelectorAll('.slideshow img');
+let index=0;
+slides[0].style.display='block';
+setInterval(()=>{
+  slides[index].style.display='none';
+  index=(index+1)%slides.length;
+  slides[index].style.display='block';
+},3000);
+</script>
 
 </body>
 </html>
