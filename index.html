@@ -1,0 +1,230 @@
+<!-- INDEX / DISCLAIMER PAGE -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Legend Saravanan | Rasigar Mandram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#3b1f0f;color:#fff;text-align:center}
+.disclaimer{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:30px}
+.disclaimer h1{color:#f5c16c}
+.disclaimer p{max-width:800px;line-height:1.7;color:#f0e6d8}
+.enter-btn{margin-top:30px;padding:15px 40px;font-size:18px;background:#f5c16c;color:#3b1f0f;border:none;border-radius:30px;cursor:pointer}
+.enter-btn:hover{background:#ffd98e}
+</style>
+</head>
+<body>
+<div class="disclaimer">
+  <h1>Legend Saravanan – Rasigar Mandram</h1>
+  <p>
+    Disclaimer: This fan website is created for information, fan engagement, and social activities of Legend Saravanan Rasigar Mandram. All movie names, images, and video embeds belong to their respective owners. This site is not intended for commercial misuse.
+    <br><br>
+    <strong>State President:</strong> Muthu Durai
+  </p>
+  <button class="enter-btn" onclick="location.href='home.html'">ENTER WEBSITE</button>
+</div>
+</body>
+</html>
+
+<!-- ================= HOME PAGE (home.html) ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Legend Saravanan | Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#3b1f0f;color:#fff}
+header{background:#2a1409;padding:15px;text-align:center}
+header h1{margin:0;color:#f5c16c}
+nav{margin-top:10px}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold}
+nav a:hover{color:#f5c16c}
+.container{padding:20px}
+.slideshow{max-width:900px;margin:20px auto;position:relative}
+.slideshow img{width:100%;border-radius:12px;display:none}
+.slideshow img.active{display:block}
+section{margin-top:40px}
+section h2{color:#f5c16c}
+footer{margin-top:50px;padding:15px;text-align:center;font-size:14px;color:#e0cfae}
+</style>
+</head>
+<body>
+<header>
+<h1>Legend Saravanan Rasigar Mandram</h1>
+<nav>
+<a href="home.html">Home / முகப்பு</a>
+<a href="legend.html">About Legend / லெஜண்ட் பற்றி</a>
+<a href="movie.html">Legend Movie / லெஜண்ட் திரைப்படம்</a>
+<a href="second-movie.html">Second Movie / இரண்டாம் படம்</a>
+<a href="mandram.html">Mandram / மன்றம்</a>
+<a href="zones.html">7 Zones / 7 மண்டலங்கள்</a>
+<a href="press.html">Press Kit / ஊடக தகவல்</a>
+<a href="join.html">Join / சேரவும்</a>
+<a href="contact.html">Contact / தொடர்பு</a>
+</nav>
+</header>
+
+<div class="container">
+<div class="slideshow">
+<img src="https://i.ibb.co/Xfp8MHLk/1000839050-1.jpg" class="active">
+<img src="https://i.ibb.co/WpfcK2dm/1000841811-1.jpg">
+<img src="https://i.ibb.co/4ncPb6R7/1000841812.jpg">
+</div>
+
+<section>
+<h2>Welcome | வரவேற்பு</h2>
+<p>
+<strong>English:</strong><br>
+Legend Saravanan Rasigar Mandram functions with the aim of promoting cinema, unity among fans, and large-scale social welfare activities across Tamil Nadu.
+<br><br>
+<strong>தமிழ்:</strong><br>
+லெஜண்ட் சரவணன் ரசிகர் மன்றம் திரைப்பட வளர்ச்சி, ரசிகர்களின் ஒற்றுமை மற்றும் தமிழகமெங்கும் சமூக சேவைகளை முன்னெடுக்கிறது.
+</p>
+</section>
+</div>
+
+<footer>
+© Legend Saravanan Rasigar Mandram | Fan Initiative
+</footer>
+
+<script>
+let slides=document.querySelectorAll('.slideshow img');let i=0;
+setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active')},3000);
+</script>
+</body>
+</html>
+
+<!-- ================= ZONES PAGE (zones.html) ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Legend Mandram – 7 Zones</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{margin:0;font-family:Arial;background:#3b1f0f;color:#fff}
+header{background:#2a1409;padding:15px;text-align:center}
+header h1{color:#f5c16c}
+.container{padding:20px;max-width:1100px;margin:auto}
+.zone{background:#2a1409;padding:20px;margin-bottom:25px;border-radius:12px}
+.zone h3{color:#f5c16c}
+.zone form input,.zone form textarea{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:none}
+.zone form button{padding:10px 25px;background:#f5c16c;border:none;border-radius:20px;font-weight:bold;cursor:pointer}
+</style>
+</head>
+<body>
+<header>
+<h1>Legend Mandram – 7 City Center Zones</h1>
+<p>Under State President – Muthu Durai</p>
+</header>
+
+<div class="container">
+
+<div class="zone"><h3>Chennai Zone</h3>
+<form onsubmit="alert('Thank you for contacting Chennai Zone');return false;">
+<input placeholder="Name"><input placeholder="Phone"><textarea placeholder="Message"></textarea><button>Submit</button>
+</form></div>
+
+<div class="zone"><h3>Trichy Zone</h3>
+<form onsubmit="alert('Thank you for contacting Trichy Zone');return false;">
+<input placeholder="Name"><input placeholder="Phone"><textarea placeholder="Message"></textarea><button>Submit</button>
+</form></div>
+
+<div class="zone"><h3>Madurai Zone</h3>
+<form onsubmit="alert('Thank you for contacting Madurai Zone');return false;">
+<input placeholder="Name"><input placeholder="Phone"><textarea placeholder="Message"></textarea><button>Submit</button>
+</form></div>
+
+<div class="zone"><h3>Tirunelveli Zone</h3>
+<form onsubmit="alert('Thank you for contacting Tirunelveli Zone');return false;">
+<input placeholder="Name"><input placeholder="Phone"><textarea placeholder="Message"></textarea><button>Submit</button>
+</form></div>
+
+<div class="zone"><h3>Coimbatore Zone</h3>
+<form onsubmit="alert('Thank you for contacting Coimbatore Zone');return false;">
+<input placeholder="Name"><input placeholder="Phone"><textarea placeholder="Message"></textarea><button>Submit</button>
+</form></div>
+
+<div class="zone"><h3>Thanjavur Zone</h3>
+<form onsubmit="alert('Thank you for contacting Thanjavur Zone');return false;">
+<input placeholder="Name"><input placeholder="Phone"><textarea placeholder="Message"></textarea><button>Submit</button>
+</form></div>
+
+<div class="zone"><h3>Vellore Zone</h3>
+<form onsubmit="alert('Thank you for contacting Vellore Zone');return false;">
+<input placeholder="Name"><input placeholder="Phone"><textarea placeholder="Message"></textarea><button>Submit</button>
+</form></div>
+
+</div>
+</body>
+</html>
+
+<!-- ================= JOIN PAGE (join.html) ================= -->
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8"><title>Join Mandram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{background:#3b1f0f;color:#fff;font-family:Arial}
+.container{max-width:650px;margin:40px auto;background:#2a1409;padding:25px;border-radius:12px}
+h2{color:#f5c16c;text-align:center}
+label{font-weight:bold}
+input,select{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:none}
+button{width:100%;padding:12px;background:#f5c16c;border:none;border-radius:25px;font-size:16px;font-weight:bold}
+.note{margin-top:10px;color:#e6d3b1;font-size:14px}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Join Legend Rasigar Mandram<br>லெஜண்ட் ரசிகர் மன்றத்தில் சேரவும்</h2>
+<form onsubmit="alert('நன்றி! உங்கள் விண்ணப்பம் வெற்றிகரமாக சமர்ப்பிக்கப்பட்டது.');return false;">
+<label>Name / பெயர்</label>
+<input required>
+<label>Age / வயது</label>
+<input required>
+<label>City / நகரம்</label>
+<input required>
+<label>Education / கல்வி</label>
+<input>
+<label>Job / Business / வேலை / தொழில்</label>
+<input>
+<button>Submit / சமர்ப்பிக்கவும்</button>
+</form>
+<p class="note">State President: Muthu Durai | மாநில தலைவர்: முத்து துரை</p>
+</div>
+</body>
+</html>
+
+<!-- ================= CONTACT PAGE (contact.html) ================= -->
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8"><title>Contact</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body{background:#3b1f0f;color:#fff;font-family:Arial;text-align:center}
+.container{max-width:650px;margin:40px auto;background:#2a1409;padding:25px;border-radius:12px}
+h2{color:#f5c16c}
+input,textarea{width:100%;padding:10px;margin:8px 0;border-radius:6px;border:none}
+button{padding:12px 30px;background:#f5c16c;border:none;border-radius:25px;font-size:16px;font-weight:bold}
+.whatsapp{margin-top:15px;display:inline-block;background:#25D366;color:#000;padding:12px 25px;border-radius:25px;font-weight:bold;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+<h2>Contact Rasigar Mandram<br>ரசிகர் மன்ற தொடர்பு</h2>
+<p><strong>State President:</strong> Muthu Durai<br><strong>மாநில தலைவர்:</strong> முத்து துரை</p>
+<p><strong>Contact Number:</strong> 8144441789</p>
+<a class="whatsapp" href="https://wa.me/918144441789" target="_blank">WhatsApp Muthu Durai</a>
+<form onsubmit="alert('Thank you for contacting / தொடர்பு கொண்டதற்கு நன்றி');return false;">
+<input placeholder="Name / பெயர்" required>
+<input placeholder="Phone / தொலைபேசி" required>
+<textarea placeholder="Message / செய்தி"></textarea>
+<button>Send / அனுப்பு</button>
+</form>
+</div>
+</body>
+</html>
